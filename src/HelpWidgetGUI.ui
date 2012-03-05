@@ -1,0 +1,88 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>HelpForm</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>HelpForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>480</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Help</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>layout2</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget" row="1" column="0">
+                    <property name="name">
+                        <cstring>layout1</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel1</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Search for:</string>
+                            </property>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>SearchString</cstring>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Type a search string here, press "Enter" to find next case</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QTextBrowser" row="0" column="0">
+                    <property name="name">
+                        <cstring>HelpBrowser</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <family>Courier 10 Pitch</family>
+                        </font>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>SearchString</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>HelpForm</receiver>
+        <slot>helpSearchString()</slot>
+    </connection>
+    <connection>
+        <sender>SearchString</sender>
+        <signal>returnPressed()</signal>
+        <receiver>HelpForm</receiver>
+        <slot>helpSearchString()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>helpSearchString()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
