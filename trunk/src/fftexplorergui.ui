@@ -1,0 +1,752 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>MainFrame</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>MainFrame</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>598</width>
+            <height>356</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>FFTExplorer</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="1" column="0">
+            <property name="name">
+                <cstring>layout3</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>StartButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Start</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+S</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Begin FFT conversion process</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>StopButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>S&amp;top</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+T</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Stop conversion process, freeze the display</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>60</width>
+                            <height>31</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>dummyButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>pushButton5</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>QuitButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Quit</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+Q</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Exit FFTExplorer</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QTabWidget" row="0" column="0">
+            <property name="name">
+                <cstring>TabPane</cstring>
+            </property>
+            <property name="tabPosition">
+                <enum>Bottom</enum>
+            </property>
+            <property name="tabShape">
+                <enum>Rounded</enum>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string></string>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>timePage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Time</string>
+                </attribute>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>frequencyPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Frequency</string>
+                </attribute>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>bothPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Both</string>
+                </attribute>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>configurationPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Configuration</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QGroupBox" row="0" column="0">
+                        <property name="name">
+                            <cstring>groupBox17</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Configuration</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>4</number>
+                            </property>
+                            <property name="spacing">
+                                <number>0</number>
+                            </property>
+                            <widget class="QGroupBox" row="0" column="0">
+                                <property name="name">
+                                    <cstring>groupBox2</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>General</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>4</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>4</number>
+                                    </property>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel9</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Sample Rate</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>sampleRateText</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>0</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Set the sample rate in samples per second</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="0" column="3">
+                                        <property name="name">
+                                            <cstring>arraySizeEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Set the FFT conversion array size</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="2" rowspan="2" colspan="1">
+                                        <property name="name">
+                                            <cstring>textLabel10</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>FFT Array Size</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton" row="1" column="3" rowspan="2" colspan="1">
+                                        <property name="name">
+                                            <cstring>applyButton</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Apply</string>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>If this button is enabled, click it to accept your changes</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel1_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Moving Average Period</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>movingAverageEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Set the window size for moving averages</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="2" column="2">
+                                        <property name="name">
+                                            <cstring>gridCheckBox</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Grids in charts</string>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Include calibration grids in displays</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QLayoutWidget" row="1" column="0">
+                                <property name="name">
+                                    <cstring>layout4</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QButtonGroup">
+                                        <property name="name">
+                                            <cstring>sourceButtonGroup</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string>Source</string>
+                                        </property>
+                                        <property name="exclusive">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="radioButtonExclusive">
+                                            <bool>true</bool>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>4</number>
+                                            </property>
+                                            <property name="spacing">
+                                                <number>0</number>
+                                            </property>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>internalRadioButton</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Internal</string>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Select the internal data source</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>externalRadioButton</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>External</string>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Select an external data source</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QGroupBox">
+                                        <property name="name">
+                                            <cstring>externalSourceBox</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string>External Source</string>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>4</number>
+                                            </property>
+                                            <property name="spacing">
+                                                <number>4</number>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel11</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Path</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLineEdit">
+                                                <property name="name">
+                                                    <cstring>dataSourceText</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>1</hsizetype>
+                                                        <vsizetype>0</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Specify a path to an external data source</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel1</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Format</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QComboBox">
+                                                <property name="name">
+                                                    <cstring>dataFormatComboBox</cstring>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Select the format for external data</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <widget class="QGroupBox" row="2" column="0">
+                                <property name="name">
+                                    <cstring>internalSourceBox</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Internal Source</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>4</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>4</number>
+                                    </property>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Modulation level %</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel1_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Carrier Freq. Hz</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel4</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Noise Level %</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>carrierFrequencyEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Enter the desired internal signal frequency</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>modLevelEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Enter the desired carrier modulation level</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>noiseLevelEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Enter a noise level, which is added to the internal signal</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="2">
+                                        <property name="name">
+                                            <cstring>textLabel2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Modulation Freq. Hz</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QButtonGroup" row="1" column="2" rowspan="2" colspan="2">
+                                        <property name="name">
+                                            <cstring>modTypeButtonGroup</cstring>
+                                        </property>
+                                        <property name="margin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="title">
+                                            <string>Modulation Type</string>
+                                        </property>
+                                        <property name="exclusive">
+                                            <bool>true</bool>
+                                        </property>
+                                        <widget class="QRadioButton">
+                                            <property name="name">
+                                                <cstring>amButton</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>11</x>
+                                                    <y>22</y>
+                                                    <width>50</width>
+                                                    <height>21</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>AM</string>
+                                            </property>
+                                            <property name="toolTip" stdset="0">
+                                                <string>Choose amplitude modulation</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QRadioButton">
+                                            <property name="name">
+                                                <cstring>fmButton</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>70</x>
+                                                    <y>20</y>
+                                                    <width>60</width>
+                                                    <height>21</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>FM</string>
+                                            </property>
+                                            <property name="toolTip" stdset="0">
+                                                <string>Choose frequency modulation</string>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                    <widget class="QLineEdit" row="0" column="3">
+                                        <property name="name">
+                                            <cstring>modulationFrequencyEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Enter a frequency by which the carrier signal is modulated</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                        </grid>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>helpPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Help</string>
+                </attribute>
+            </widget>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>StartButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>StartDisplay()</slot>
+    </connection>
+    <connection>
+        <sender>StopButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>StopDisplay()</slot>
+    </connection>
+    <connection>
+        <sender>QuitButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>close()</slot>
+    </connection>
+    <connection>
+        <sender>gridCheckBox</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>dataFormatComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>sampleRateText</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>enableApply()</slot>
+    </connection>
+    <connection>
+        <sender>arraySizeEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>enableApply()</slot>
+    </connection>
+    <connection>
+        <sender>dataSourceText</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>enableApply()</slot>
+    </connection>
+    <connection>
+        <sender>applyButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>internalRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>externalRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>carrierFrequencyEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>enableApply()</slot>
+    </connection>
+    <connection>
+        <sender>modLevelEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>enableApply()</slot>
+    </connection>
+    <connection>
+        <sender>noiseLevelEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>enableApply()</slot>
+    </connection>
+    <connection>
+        <sender>modulationFrequencyEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>enableApply()</slot>
+    </connection>
+    <connection>
+        <sender>amButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>fmButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>carrierFrequencyEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>modLevelEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>noiseLevelEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>modulationFrequencyEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>sampleRateText</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>arraySizeEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>dataSourceText</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+    <connection>
+        <sender>movingAverageEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MainFrame</receiver>
+        <slot>enableApply()</slot>
+    </connection>
+    <connection>
+        <sender>movingAverageEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>MainFrame</receiver>
+        <slot>applyPressed()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">fftexplorergui.ui.h</include>
+</includes>
+<slots>
+    <slot>StartDisplay()</slot>
+    <slot>StopDisplay()</slot>
+    <slot>enableApply()</slot>
+    <slot>applyPressed()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
